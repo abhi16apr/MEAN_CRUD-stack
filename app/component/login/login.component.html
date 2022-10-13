@@ -1,0 +1,30 @@
+<style>
+    .main-div mat-card {
+        padding: 0px;
+    }
+
+    .login-form {
+        padding: 20px;
+    }
+</style>
+
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">Assertmark App</mat-toolbar>
+        <form ngForm fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+            <mat-form-field>
+                <input matInput placeholder="User ID" [(ngModel)]="userId" name = "username"> 
+                <!-- <input type = "text" class ="form-control" id="password" [(ngModel)]="username" name = "username"> -->
+            
+            </mat-form-field>
+            
+
+            <mat-form-field>
+                <input matInput placeholder="password" input type = "password"[(ngModel)]="password" name="Password">
+            </mat-form-field>
+            <button mat-raised button type= "submit"(click)="login()">login</button>
+            <div> New User? <a [routerLink]="['/register']"><button>Request Access</button></a></div>
+
+        </form>
+    </mat-card>
+</div>

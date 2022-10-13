@@ -1,0 +1,10 @@
+
+
+<label for="userId">Username</label>
+            <input type="text" class="form-control" id="userId" [(ngModel)]="newRegister.userId"  name="userId">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="newRegister.name"  name="name">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="role" [(ngModel)]="newRegister.role"  name="role">
+            <button type="submit" class="btn btn-success" (click) = "addUser()">Save</button>
+

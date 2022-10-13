@@ -1,0 +1,108 @@
+<h1 style="text-align: center; color: red">User Administration</h1>
+<div class="container">
+    <div class="nav bar">
+        <button [routerLink]="['/home/admin']">User Administration</button>
+
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+<style>
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        table-layout: fixed
+    }
+
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+</style>
+
+<div>
+    <table class=".styled-table">
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>Name</th>
+                <th>Active Form</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Confirm</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor='let admin of useradmin1'>
+                <td>{{admin.userId}}</td>
+                <td>{{admin.name}}</td>
+                <td>{{admin.activeForm}}</td>
+                <td>{{admin.role}}</td>
+                <td>{{admin.status}}</td>
+                <td><span><input class="btn btn-warning" type="button" (click)="editAdminRole(admin.userId)"
+                            value="Edit"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <a [routerLink]="['/add']"> <input type="button" class="button" value="Add"> </a>
+    <div class="form-group"></div>
+</div>
+
+
+
+
+
+<form ngForm>
+    <!-- <div class="form-gr)oup">
+        <label for="ID">userId</label>
+        <<input type="text" class="form-control" id="ID" [(ngModel)]="admin.userId" name="ID">-->
+
+    <!-- <div class="form-group">
+        <label for="first_name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="admin.name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="address">Active Form</label>
+        <input type="text" class="form-control" id="activeForm" [(ngModel)]="admin.activeForm" name="activeForm">
+    </div>
+    <div class="form-group">
+        <label for="location">Role</label>
+        <input type="text" class="form-control" id="role"  [(ngModel)]="admin.role" name="role">
+    </div>
+    <div class="form-group">
+        <label for="country">Status</label>
+        <input type="text" class="form-control" id="status"  [(ngModel)]="admin.status" name="status">
+    </div>
+
+    <div style="text-align: center;">
+    </div>
+
+   </form> -->

@@ -1,0 +1,26 @@
+<div>
+    <h1>Hello Welcome! </h1>
+    <h3>Create An Account</h3>
+    <form ngForm>
+        <div>
+            <label for="userId">Username</label>
+            <input type="text" class="form-control" id="userId" [(ngModel)]="newRegister.userId"  name="userId">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="newRegister.name"  name="name">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="role" [(ngModel)]="newRegister.role"  name="role">
+            <label for="activeForm">activeForm</label>
+            <input type="date" class="form-control" id="date" [(ngModel)]="newRegister.activeForm"  name="activeForm">
+            <label for="password">Password</label>
+            <input type="text" class="form-control" id="password" [(ngModel)]="newRegister.password"  name="password">
+
+
+
+
+
+        </div>
+        <button type="submit" class="btn btn-success" (click)="signUp()">Submit</button>
+        <span>Already have an account?
+            <a routerLink="/login">signIn</a></span>
+    </form>
+</div>
